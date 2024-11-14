@@ -39,19 +39,27 @@ function renderDistributionChart(distribution) {
             datasets: [{
                 data: distribution.map(d => d.count),
                 backgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4BC0C0',
-                    '#9966FF'
-                ]
+                    '#ff71ce',
+                    '#01cdfe',
+                    '#05ffa1',
+                    '#b967ff'
+                ],
+                borderColor: '#1a1a1a',
+                borderWidth: 2
             }]
         },
         options: {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'bottom'
+                    position: 'bottom',
+                    labels: {
+                        color: '#ffffff',
+                        font: {
+                            family: "'Press Start 2P', cursive",
+                            size: 10
+                        }
+                    }
                 }
             }
         }
