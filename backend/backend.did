@@ -1,0 +1,14 @@
+type Holder = 
+ record {
+   address: text;
+   count: nat;
+ };
+type Distribution = 
+ record {
+   count: nat;
+   range: text;
+ };
+service : {
+  getDistribution: () -> (vec Distribution) query;
+  getHolders: () -> (vec Holder) query;
+}
